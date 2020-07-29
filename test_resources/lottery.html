@@ -1,0 +1,1289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+        台灣彩券 taiwanlottery
+    </title>
+    <script type="text/javascript" language="JavaScript" src="showlist.js" charset="big5"></script>
+    <script type="text/javascript" language="JavaScript" src="js/banner.js"></script>
+    <link href="css1.css?ver=1.0" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript">
+        function setClass(obj1, obj2, item1, item2) {
+            obj1.style.display = 'block';
+            obj2.style.display = 'none';
+
+            item1.setAttribute("class", "left_top_clicked");
+            item2.setAttribute("class", "left_top_unclicked");
+        }
+    </script>
+    <script type="text/JavaScript">
+
+        //
+
+        if (navigator.appName.indexOf("Internet Explorer") != -1)
+
+            document.onmousedown = noSourceExplorer;
+
+        function noSourceExplorer() {
+
+            if (event.button == 2 | event.button == 3) {
+
+                alert("版權所有 台灣彩券");
+
+
+
+            }
+
+        }
+
+        //
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149343827-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149343827-1');
+    </script>
+
+</head>
+<body onLoad="showBanner();">
+<form method="post" action="./index_new.aspx" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"/>
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="56A5C0AB"/>
+    </div>
+    <div id="wrapper_overflow">
+        <iframe src="header.asp" width="1024" height="68" scrolling="no" frameborder="0"></iframe>
+        <div id="left">
+            <!--***************刮刮樂 區塊***************-->
+            <div id="left_top">
+                <div id="left_top_btn01" class="left_top_clicked" onclick="setClass(left_top_contents01,left_top_contents02,left_top_btn01,left_top_btn02);">
+                    熱賣中</div>
+                <div id="left_top_btn02" class="left_top_unclicked" onclick="setClass(left_top_contents02,left_top_contents01,left_top_btn02,left_top_btn01);">
+                    預告</div>
+                <div id="left_top_contents01" class="display_block">
+                    <iframe src="index_onsale.html " width="224px" height="164px" scrolling="yes" frameborder="0"></iframe>
+                </div>
+                <div id="left_top_contents02" class="display_none">
+                    <iframe src="index_coming.html" width="224px" height="164px" scrolling="yes" frameborder="0"></iframe>
+                </div>
+            </div>
+            <!--***************開獎實況轉播電視圖***************-->
+            <a href="https://fnc.ebc.net.tw/TaiwanLottery/">
+                <img src="images/twl_index_pic_TV.gif" alt="TV"/>
+            </a>
+            <!--***************2020防疫專區新增區域***************-->
+            <p style="font-size:0px;height:2px;overflow:hidden;padding:0px;margin:5px;"></p>
+            <a href="prevent.asp">
+                <img border="0" src="images/twl_index_banner_168.gif" alt="防疫專區">
+            </a>
+            <p style="font-size:0px;height:2px;overflow:hidden;padding:0px;margin:5px;"></p>
+            <!--ContentArea 選單Start-->
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <link rel="stylesheet" type="text/css" href="menu.css"/>
+            </head>
+            <body>
+            <div id="nav">
+                <ul>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='about/tlc.asp';">
+                            關於台灣彩券</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='about/tlc.asp';">認識台灣彩券</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='about/lottery.asp';">認識公益彩券</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='about/CSR.asp';">企業社會責任</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='SuperLotto638/index.asp';">
+                            威力彩</a>
+                        <ul>
+                            <li class="img_logo01"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/superlotto638/index.htm';">
+                                    遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/superlotto638/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/Lotto/se/store.aspx?TYPE=SL638';">頭獎商店</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='SuperLotto638/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=SL638';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='Lotto649/index.asp';">
+                            大樂透</a>
+                        <ul>
+                            <li class="img_logo02"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/Lotto649/index.htm';">
+                                    遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/Lotto649/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/se/store.aspx?TYPE=649';">頭獎商店</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto649/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=649';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--div class="dotted00">
+                                </div>
+                                <li class="has_sub"><a href="#" onclick="window.parent.location.href='Lotto740/index.asp';">
+                                    大福彩</a>
+                                    <ul>
+                                        <li class="img_logo11"></li>
+                                        <div class="dotted00_2">
+                                        </div>
+                                        <li><a href="#" onclick="window.parent.location.href='Lotto740/index.asp';">
+                                            遊戲介紹</a></li><div class="dotted00_2">
+                                            </div>
+                                        <li><a href="#" onclick="window.parent.location.href='lotto/Lotto740/history.aspx';">
+                                            各期獎號與開獎結果</a></li><div class="dotted00_2">
+                                            </div>
+                                        <li><a href="#" onclick="window.parent.location.href='Lotto/se/store.aspx?TYPE=740';">頭獎商店</a></li><div
+                                            class="dotted00_2">
+                                        </div>
+                                        <li><a href="#" onclick="window.parent.location.href='Lotto740/schedule.asp';">
+                                            開獎時間</a></li><div class="dotted00_2">
+                                            </div>
+                                        <li><a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=740';">
+                                            冷熱門球號</a></li>
+                                    </ul>
+                                </li-->
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='DailyCash/index.asp';">
+                            今彩539</a>
+                        <ul>
+                            <li class="img_logo03"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/DailyCash/index.htm';">
+                                    遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/DailyCash/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/se/store.aspx?TYPE=539';">頭獎商店</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='DailyCash/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=539';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='Lotto1224/index.asp';">
+                            雙贏彩</a>
+                        <ul>
+                            <li class="img_logo12"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/Lotto1224/index.htm';">
+                                    遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/Lotto1224/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/se/store.aspx?TYPE=1224';">頭獎商店</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto1224/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=1224';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='BINGOBINGO/index.asp';">
+                            BINGO BINGO賓果賓果</a>
+                        <ul>
+                            <li class="img_logo04"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='BINGOBINGO/index.asp';">
+                                    遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='lotto/BINGOBINGO/drawing.aspx';">
+                                    各期獎號查詢</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='lotto/BINGOBINGO/history.aspx';">
+                                    各期獎金分配查詢</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/BINGOBINGO/store.aspx';">10星商店</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='BINGOBINGO/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=BB';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='3D/index.asp';">
+                            3星彩</a>
+                        <ul>
+                            <li class="img_logo05"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/3D/index.htm';">遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/3D/history.htm';">各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='3D/schedule.asp';">開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=3D';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='4D/index.asp';">
+                            4星彩</a>
+                        <ul>
+                            <li class="img_logo06"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/4D/index.htm';">遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/4D/history.htm';">各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='4D/schedule.asp';">開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=4D';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='38M6/index.asp';">
+                            38樂合彩</a>
+                        <ul>
+                            <li class="img_logo07"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/38M6/index.htm';">遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/lotto/38M6/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='38M6/schedule.asp';">開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=38';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='49M6/index.asp';">
+                            49樂合彩</a>
+                        <ul>
+                            <li class="img_logo08"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/49M6/index.htm';">遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/49M6/history.htm';">
+                                    各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='49M6/schedule.asp';">開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=49';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='39M5/index.asp';">
+                            39樂合彩</a>
+                        <ul>
+                            <li class="img_logo09"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/39M5/index.htm';">遊戲介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='http://210.71.254.181/Lotto/39M5/history.htm';">各期獎號與開獎結果</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='39M5/schedule.asp';">開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Info/number/frequency.aspx?GAME=39';">
+                                    冷熱門球號</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#">
+                            「加開獎項」加碼活動專區</a>
+
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/DBF2020/DBF2020.asp';">109年端午加碼活動辦法</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                各期獎號與開獎結果</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/DragonBoatFestival2020/DragonBoat2020_index.aspx">
+                                    109年端午加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2020/bigred_index109.aspx">
+                                    109年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/MoonFestival2019/MoonFestival2019_index.aspx">
+                                    108年中秋加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/DragonBoatFestival2019/DragonBoat2019_index.aspx">
+                                    108年端午加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2019/bigred_index108.aspx">
+                                    108年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/MoonFestival2018/MoonFestival_index107.aspx">
+                                    107年中秋加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/DragonBoatFestival2018/DragonBoatFestival2018index.aspx">
+                                    107年端午加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2018/bigred_index_result107.aspx">
+                                    107年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/MoonFestival2017/MoonFestival2017index.aspx">
+                                    106年中秋加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/DragonBoatFestival2017/bigred_index106.aspx">
+                                    106年端午加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2017/bigred_index_result106.aspx">
+                                    106年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/DoubleTen2016/DoubleTen2016index.aspx">
+                                    105年雙十國慶加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/DBF/DragonBoatFestival2016index.aspx">
+                                    105年端午加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2016/bigred_index_result105.aspx">
+                                    105年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2015/bigred_index_result.aspx">
+                                    104年春節加碼</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/lotto/AnnualGreatEvent/BigRedPacket2014/bigred_index_result.aspx">
+                                    103年春節加碼</a>
+                            </li>
+                            <!--li><a href="#" onclick="window.parent.location.href='http://www.taiwanlottery.com.tw/lotto/AnnualGreatEvent/BigRedPacket2014/bigred_index_result.aspx';">
+                                                    各期獎號與開獎結果 </a></li-->
+
+                            <div class="dotted00_2"></div>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='instant/index.asp';">
+                            刮刮樂</a>
+                        <ul>
+                            <li class="img_logo10"></li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='instant/index.asp';">刮刮樂介紹</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='instant/games.asp';">熱賣中刮刮樂</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='instant/preview.asp';">
+                                    刮刮樂預告</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/instant/sale.aspx';">刮刮樂銷售資訊</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='info/news/news.aspx';">
+                            新聞及公告</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/news/news.aspx';">新聞發佈</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/info/info.aspx';">公告事項</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#">
+                            彩券資訊通</a>
+                        <ul class="info_lotto_reloc">
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/lotto/data_SL638.aspx';">威力彩統計資料</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/lotto/data_649.aspx';">大樂透統計資料</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <!--li><a href="#" onclick="window.parent.location.href='info/lotto/data_740.aspx';">大福彩統計資料</a></li><div class="dotted00_2">
+                                                </div-->
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/lotto/data_539.aspx';">今彩539統計資料</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/lotto/data_1224.aspx';">雙贏彩統計資料</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='info/download_history.asp';">第4屆各期獎號下載</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                第4屆下市遊戲各期獎號</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/Lotto/Lotto740/history.aspx">
+                                    大福彩</a>
+                            </li>
+                            <li>
+                                96-102年各期獎號</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/SuperLotto638/history.aspx">
+                                    威力彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/lotto649/history.aspx">
+                                    大樂透</a>
+                            </li>
+                            <!--li class="third_sub"><a href="/3th_lotto/BingoBingo/drawing.aspx">
+                                                    BINGO BINGO賓果賓果</a></li-->
+                            <li class="third_sub">
+                                <a href="/3th_lotto/DailyCash/history.aspx">
+                                    今彩539</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/3D/history.aspx">
+                                    3星彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/4D/history.aspx">
+                                    4星彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/38M6/history.aspx">
+                                    38樂合彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/49M6/history.aspx">
+                                    49樂合彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/39M5/history.aspx">
+                                    39樂合彩</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/AnnualGreatEvent2013/Result_allAnnual2013.aspx">
+
+                                    102年「春節大紅包」獎號
+                                    <br/>
+
+                                    與開獎結果
+                                </a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/AnnualGreatEvent/result_allAnnual2012.aspx">
+
+                                    101年龍年新春加碼「大紅包」
+                                    <br/>
+
+                                    獎號與開獎結果
+                                </a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/mega/result_all.aspx">
+
+                                    100年「100組百萬獎金」獎號
+                                    <br/>
+
+                                    與開獎結果
+                                </a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lotto/TTT/history.aspx">
+                                    樂線九宮格</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="http://www.taiwanlottery.com.tw/3th_Lotto/Lotto638/history.aspx">
+                                    6/38樂透彩</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/3th_lottery_1230/info/instant/sale.aspx';">96-102年刮刮樂銷售資訊</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='runlottery/runlottery.asp';">
+                            開獎專區</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='runlottery/runlottery.asp';">
+                                    開獎流程</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='runlottery/schedule.asp';">
+                                    開獎時間</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq.asp';">開獎問與答</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='https://www.youtube.com/channel/UCK1Zh_2KvKKFkDBCSYuLjAw';">
+                                    開獎實況轉播</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='/agencyap/login.asp';">
+                            經銷商專區</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/agencyap/financialLogin.aspx';">紓困補助申請</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/agencyap/news.asp';">公告事項</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/agencyap/login.asp';">經銷商登入</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <!--li><a href="#" onclick="window.parent.location.href='/agencyap/agencyap_online_login.aspx';">
+                                                    電腦型經銷商登入</a></li><div class="dotted00_2">
+                                                    </div>
+                                                <li><a href="#" onclick="window.parent.location.href='/agencyap/agencyap_instant_login.aspx';">
+                                                    立即型經銷商登入</a></li><div class="dotted00_2">
+                                                    </div-->
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/agencyap/agency_se_login.aspx';">
+                                    批售兌獎處登入</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/agencyap/pinchhit.asp';">
+                                    遞補順序</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='agencyap/rules.asp';">遴選及管理要點</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='agencyap/join.asp';">我想要賣刮刮樂</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <!--li><a href="#" onclick="window.parent.location.href='/agencyap/online_audition.aspx';">
+                                                    有意願擔任代理人查詢</a></li><div class="dotted00_2">
+                                                    </div-->
+                        </ul>
+                    </li>
+
+                    <div class="dotted00"></div>
+                    <!--li class="has_sub"><a href="#" onclick="window.parent.location.href='https://selection.taiwanlottery.com.tw';">
+                                    電腦型經銷商遴選報名</a>
+                                                    <ul>
+                                        <li><a href="#" onclick="window.parent.location.href='https://selection.taiwanlottery.com.tw';">電腦型經銷商遴選報名</a></li>
+                                        </ul>
+                                </li>
+
+
+                                <div class="dotted00">
+                                </div-->
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='faq/faq.asp';">
+                            常見問答</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq.asp';">開獎</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq_faq01.asp';">兌獎</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq_faq02.asp';">彩券玩法</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq_faq03.asp';">經銷商</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='faq/faq_faq04.asp';">稅賦與佣金</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='about/howtoplay.asp';">
+                            投注方式與兌獎</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='about/howtoplay.asp';">投注方式</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/se/salelocation.aspx';">
+                                    銷售地點</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='about/bonus.asp';">如何兌領獎金</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='Lotto/se/location.aspx';">批售兌獎處</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                    <li class="has_sub">
+                        <a href="#" onclick="window.parent.location.href='/info/welfare/profit.asp';">
+                            愛心公益</a>
+                        <ul>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/info/welfare/profit.asp';">
+                                    公益彩券盈餘分配比率</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/info/welfare/welfare_profit4.aspx';">
+                                    公益彩券各直轄市、縣（市）　 政府盈餘分配撥付表</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lottery_1230/info/welfare/profit2.aspx">
+                                    96-102年公益彩券盈餘分配表</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                            <li>
+                                <a href="#" onclick="window.parent.location.href='/info/welfare/welfare_profit5.aspx';">公益彩券營業報告書簡表</a>
+                            </li>
+                            <li class="third_sub">
+                                <a href="/3th_lottery_1230/info/welfare/profit3.aspx">
+                                    96-102年營業報告書簡表</a>
+                            </li>
+                            <div class="dotted00_2"></div>
+                        </ul>
+                    </li>
+                    <div class="dotted00"></div>
+                </ul>
+            </div>
+            <div id="qrcode">
+                <p>&nbsp;</p>
+                <p>
+                    <img src="images/qrcode.png"/>
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 台灣彩券</p>
+                <br/>
+            </div>
+            </body>
+            </html>
+
+        </div>
+        <div id="right_top">
+            <!--***************預估頭彩區塊***************-->
+            <div id="top_dollarbox">
+                <img id="imgPowerLottery" src="images/logo_totbox_01.jpg"/>
+                <img id="imgBigLottery" src="images/logo_totbox_02.jpg"/>
+                <!--img id="imgFLottery" src="images/logo_totbox_03.jpg" /-->
+
+                <img id="dodo01" src="images/dodo.gif"/>
+                <img id="dodo02" src="images/dodo.gif"/>
+                <img id="dodo03" src="images/dodo.gif"/>
+                <img id="dodo04" src="images/dodo.gif"/>
+                <img id="dodo05" src="images/dodo.gif"/>
+                <img id="dodo06" src="images/dodo.gif"/>
+                <!--img id="dodo07" src="images/dodo.gif" /><img id="dodo08" src="images/dodo.gif" /><img id="dodo09" src="images/dodo.gif" /-->
+                <div class="dollar_right">目前頭獎預估金額</div>
+                <div class="top_dollar_tx">
+                    <span id="lMoney38">$</span>
+                    <!--***************威力彩***************-->
+
+                    <div class="top_dollar">2536051504</div>
+
+                </div>
+                <!--ContentArea 威力彩預估金額 End-->
+                <br>
+                <hr/>
+                <div class="top_dollar_tx">
+                    <span id="lMoney49">$</span>
+                    <!--ContentArea 大樂透預估金額 Start-->
+
+                    <div class="top_dollar">0100000000</div>
+
+                </div>
+                <!--ContentArea 大樂透預估金額 End-->
+                <br>
+                <hr/>
+                <!--div class="top_dollar_tx">$
+                        <ContentArea 大福彩預估金額 Start>
+                        <div class="top_dollar">
+
+                        </div>
+                      </div-->
+            </div>
+            <div id="right_side">
+                <!-- *輪播區* -->
+                <div id="bannerSpan" class="banner"></div>
+
+                <!-- *輪播區* -->
+            </div>
+            <!--***************最新消息區塊***************-->
+
+            <div id="top_news">
+                <div class="top_news_title">
+                    最新消息
+                    <span class="font_glay10">ＨＯＴ ＮＥＷＳ </span>
+                    <div id="more_right" class="font_glay10">
+                        <a href="info/news/news.aspx">more></a>
+                    </div>
+                </div>
+                <hr size="2" color="#FF0000" style="margin-bottom:0px"/>
+                <div class="font_glay14_indexNews">
+                    <ul>
+                        <li style=height:2px;padding:0;border:0;background-position:-300px 0;margin-top:0px!important;margin-top:-20px;></li>
+                        <li>
+                            <a href="/news/DrawNumber.aspx" style=font-weight:bold;>
+                                <span class=date></span>
+                                最新開獎獎號一覽表
+                            </a>
+                        </li>
+                        <li>
+                            <a href=/news/IN1090715news_detail_604.asp>
+                                <span class=date>[109/7/15]</span>
+                                振興公益買彩券 刮刮樂「一路發」「幸運輪盤」喜上市
+                            </a>
+                        </li>
+                        <li>
+                            <a href=/news/IN1090710news_detail_603.asp>
+                                <span class=date>[109/7/10]</span>
+                                立即型彩券「一路發」與「幸運輪盤」上市公告
+                            </a>
+                        </li>
+                        <li>
+                            <a href=/news/IN1090702news_detail_602.asp>
+                                <span class=date>[109/7/2]</span>
+                                振興好運到 刮刮樂「幸運開獎機」「幸運777」歡喜登場
+                            </a>
+                        </li>
+                        <li>
+                            <a href=/news/IN1090629news_detail_598.asp>
+                                <span class=date>[109/6/29]</span>
+                                立即型彩券「幸運777」與「幸運開獎機」上市公告
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top_news_title">
+                    重點資訊
+                    <span class="font_glay10">ＡＮＮＯＵＮＣＥＭＥＮＴ </span>
+                    <div id="Div1" class="font_glay10"></div>
+                </div>
+                <hr size="2" color="#FF0000" style="margin-bottom:0px"/>
+                <div class="font_glay14_indexNews">
+                    <ul>
+                        <li style=height:2px;padding:0;border:0;background-position:-300px 0;margin-top:0px!important;margin-top:-20px;></li>
+                        <li>
+                            <a href="/news/AS1080920news_detail_540.asp">
+                                <span class=date></span>
+                                公益彩券中獎獎金免稅門檻提高為新臺幣5,000元
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/news/ON1070904news_detail_431.asp">
+                                <span class=date></span>
+                                專業人士參觀本公司開獎電視台及開獎流程影音連結
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/news/ON1050905news_detail_242.asp">
+                                <span class=date></span>
+                                台彩嚴正駁斥網路「開獎不實」傳聞
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="rightdown">
+            <!--***************BINGO BINGO**************-->
+            <div class="contents_box01">
+                <div id="contents_logo_01"></div>
+                <div class="contents_mine_tx01">
+                    <span class="font_black15">109/7/23&nbsp;第109041596期 </span>
+                    <span class="font_red14">
+                            <a href="/Lotto/BingoBingo/history.aspx">開獎結果</a>
+                             ｜
+                            <a href="/Lotto/BingoBingo/drawing.aspx">各期獎號查詢</a>
+                            <a href="/lotto/BingoBingo/OEHLStatistic.htm">
+                                <div id="contents_logo_01-2"></div>
+                            </a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">開出獎號</div>
+                <div class="ball_box01">
+                    <div class="ball_tx ball_yellow">05 </div>
+                    <div class="ball_tx ball_yellow">09 </div>
+                    <div class="ball_tx ball_yellow">17 </div>
+                    <div class="ball_tx ball_yellow">20 </div>
+                    <div class="ball_tx ball_yellow">21 </div>
+                    <div class="ball_tx ball_yellow">29 </div>
+                    <div class="ball_tx ball_yellow">30 </div>
+                    <div class="ball_tx ball_yellow">31 </div>
+                    <div class="ball_tx ball_yellow">34 </div>
+                    <div class="ball_tx ball_yellow">35 </div>
+                    <div class="ball_tx ball_yellow">40 </div>
+                    <div class="ball_tx ball_yellow">41 </div>
+                    <div class="ball_tx ball_yellow">46 </div>
+                    <div class="ball_tx ball_yellow">47 </div>
+                    <div class="ball_tx ball_yellow">60 </div>
+                    <div class="ball_tx ball_yellow">63 </div>
+                    <div class="ball_tx ball_yellow">64 </div>
+                    <div class="ball_tx ball_yellow">65 </div>
+                    <div class="ball_tx ball_yellow">69 </div>
+                    <div class="ball_tx ball_yellow">77 </div>
+                </div>
+                <div class="contents_mine_tx08">
+                    &nbsp&nbsp超級
+                    <br>
+                    &nbsp&nbsp獎號
+                    <br>
+                    <div class="ball_red">69</div>
+                </div>
+                <div class="contents_mine_tx08">
+                    &nbsp&nbsp&nbsp猜
+                    <br>
+                    &nbsp大&nbsp小
+                    <br>
+                    <div class="ball_blue_BB1">－</div>
+                </div>
+                <div class="contents_mine_tx08">
+                    &nbsp&nbsp&nbsp猜
+                    <br>
+                    &nbsp單&nbsp雙
+                    <br>
+                    <div class="ball_blue_BB2">單</div>
+                </div>
+            </div>
+            <div class="dotted01"></div>
+            <!--***************雙贏彩區塊***************-->
+            <div class="contents_box06">
+                <div id="contents_logo_11"></div>
+                <div class="contents_mine_tx09">
+                    <span class="font_black15">109/7/23&nbsp;第109000176期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#12">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                </div>
+                <div class="ball_tx ball_blue">04 </div>
+                <div class="ball_tx ball_blue">18 </div>
+                <div class="ball_tx ball_blue">08 </div>
+                <div class="ball_tx ball_blue">02 </div>
+                <div class="ball_tx ball_blue">15 </div>
+                <div class="ball_tx ball_blue">11 </div>
+                <div class="ball_tx ball_blue">09 </div>
+                <div class="ball_tx ball_blue">20 </div>
+                <div class="ball_tx ball_blue">17 </div>
+                <div class="ball_tx ball_blue">16 </div>
+                <div class="ball_tx ball_blue">21 </div>
+                <div class="ball_tx ball_blue">05 </div>
+                <div class="ball_tx ball_blue">02 </div>
+                <div class="ball_tx ball_blue">04 </div>
+                <div class="ball_tx ball_blue">05 </div>
+                <div class="ball_tx ball_blue">08 </div>
+                <div class="ball_tx ball_blue">09 </div>
+                <div class="ball_tx ball_blue">11 </div>
+                <div class="ball_tx ball_blue">15 </div>
+                <div class="ball_tx ball_blue">16 </div>
+                <div class="ball_tx ball_blue">17 </div>
+                <div class="ball_tx ball_blue">18 </div>
+                <div class="ball_tx ball_blue">20 </div>
+                <div class="ball_tx ball_blue">21 </div>
+            </div>
+            <div class="dotted01"></div>
+            <!--***************威力彩區塊***************-->
+            <div class="contents_box02">
+                <div id="contents_logo_02"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000059期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#01">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                    <br>
+                    第二區
+                </div>
+                <div class="ball_tx ball_green">35 </div>
+                <div class="ball_tx ball_green">17 </div>
+                <div class="ball_tx ball_green">09 </div>
+                <div class="ball_tx ball_green">01 </div>
+                <div class="ball_tx ball_green">18 </div>
+                <div class="ball_tx ball_green">31 </div>
+                <div class="ball_tx ball_green">01 </div>
+                <div class="ball_tx ball_green">09 </div>
+                <div class="ball_tx ball_green">17 </div>
+                <div class="ball_tx ball_green">18 </div>
+                <div class="ball_tx ball_green">31 </div>
+                <div class="ball_tx ball_green">35 </div>
+                <div class="ball_red">02 </div>
+            </div>
+            <div class="dotted02"></div>
+            <!--***************38樂合彩區塊***************-->
+            <div class="contents_box02">
+                <div id="contents_logo_03"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000059期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#07">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                </div>
+                <div class="ball_tx ball_green">35 </div>
+                <div class="ball_tx ball_green">17 </div>
+                <div class="ball_tx ball_green">09 </div>
+                <div class="ball_tx ball_green">01 </div>
+                <div class="ball_tx ball_green">18 </div>
+                <div class="ball_tx ball_green">31 </div>
+                <div class="ball_tx ball_green">01 </div>
+                <div class="ball_tx ball_green">09 </div>
+                <div class="ball_tx ball_green">17 </div>
+                <div class="ball_tx ball_green">18 </div>
+                <div class="ball_tx ball_green">31 </div>
+                <div class="ball_tx ball_green">35 </div>
+            </div>
+            <div class="dotted01"></div>
+            <!--***************大樂透區塊***************-->
+            <div class="contents_box02">
+                <div id="contents_logo_04"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/21&nbsp;第109000066期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#02">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                    <br>
+                    特別號
+                </div>
+                <div class="ball_tx ball_yellow">25 </div>
+                <div class="ball_tx ball_yellow">36 </div>
+                <div class="ball_tx ball_yellow">03 </div>
+                <div class="ball_tx ball_yellow">33 </div>
+                <div class="ball_tx ball_yellow">16 </div>
+                <div class="ball_tx ball_yellow">31 </div>
+                <div class="ball_tx ball_yellow">03 </div>
+                <div class="ball_tx ball_yellow">16 </div>
+                <div class="ball_tx ball_yellow">25 </div>
+                <div class="ball_tx ball_yellow">31 </div>
+                <div class="ball_tx ball_yellow">33 </div>
+                <div class="ball_tx ball_yellow">36 </div>
+                <div class="ball_red">14 </div>
+            </div>
+            <div class="dotted02"></div>
+            <!--***************49樂合彩區塊***************-->
+            <div class="contents_box02">
+                <div id="contents_logo_05"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/21&nbsp;第109000066期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#08">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                </div>
+                <div class="ball_tx ball_yellow">25 </div>
+                <div class="ball_tx ball_yellow">36 </div>
+                <div class="ball_tx ball_yellow">03 </div>
+                <div class="ball_tx ball_yellow">33 </div>
+                <div class="ball_tx ball_yellow">16 </div>
+                <div class="ball_tx ball_yellow">31 </div>
+                <div class="ball_tx ball_yellow">03 </div>
+                <div class="ball_tx ball_yellow">16 </div>
+                <div class="ball_tx ball_yellow">25 </div>
+                <div class="ball_tx ball_yellow">31 </div>
+                <div class="ball_tx ball_yellow">33 </div>
+                <div class="ball_tx ball_yellow">36 </div>
+            </div>
+            <div class="dotted01"></div>
+            <!--***************大福彩區塊***************-->
+            <!--div class="contents_box05">
+
+                </div-->
+            <!--div class="dotted01"></div-->
+            <!--**************今彩539區塊**************-->
+            <div class="contents_box03">
+                <div id="contents_logo_06"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000176期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#03">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                </div>
+                <div class="ball_tx ball_lemon">17 </div>
+                <div class="ball_tx ball_lemon">33 </div>
+                <div class="ball_tx ball_lemon">10 </div>
+                <div class="ball_tx ball_lemon">37 </div>
+                <div class="ball_tx ball_lemon">01 </div>
+                <div class="ball_tx"></div>
+                <div class="ball_tx ball_lemon">01 </div>
+                <div class="ball_tx ball_lemon">10 </div>
+                <div class="ball_tx ball_lemon">17 </div>
+                <div class="ball_tx ball_lemon">33 </div>
+                <div class="ball_tx ball_lemon">37 </div>
+            </div>
+            <div class="dotted03"></div>
+            <!--**************39樂合彩區塊**************-->
+            <div class="contents_box03">
+                <div id="contents_logo_07"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000176期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#09">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">
+                    開出順序
+                    <br>
+                    大小順序
+                </div>
+                <div class="ball_tx ball_lemon">17 </div>
+                <div class="ball_tx ball_lemon">33 </div>
+                <div class="ball_tx ball_lemon">10 </div>
+                <div class="ball_tx ball_lemon">37 </div>
+                <div class="ball_tx ball_lemon">01 </div>
+                <div class="ball_tx"></div>
+                <div class="ball_tx ball_lemon">01 </div>
+                <div class="ball_tx ball_lemon">10 </div>
+                <div class="ball_tx ball_lemon">17 </div>
+                <div class="ball_tx ball_lemon">33 </div>
+                <div class="ball_tx ball_lemon">37 </div>
+            </div>
+            <div class="dotted01"></div>
+            <!--**************3星彩區塊**************-->
+            <div class="contents_box04">
+                <div id="contents_logo_08"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000176期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#05">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">中獎號碼</div>
+                <div class="ball_tx ball_purple">4</div>
+                <div class="ball_tx ball_purple">1</div>
+                <div class="ball_tx ball_purple">1</div>
+            </div>
+            <div class="dotted04"></div>
+            <!--**************4星彩區塊**************-->
+            <div class="contents_box04">
+                <div id="contents_logo_09"></div>
+                <div class="contents_mine_tx02">
+                    <span class="font_black15">109/7/23&nbsp;第109000176期 </span>
+                    <span class="font_red14">
+                            <a href="Result_all.aspx#06">開獎結果</a>
+                        </span>
+                </div>
+                <div class="contents_mine_tx04">中獎號碼</div>
+                <div class="ball_tx ball_purple">6</div>
+                <div class="ball_tx ball_purple">9</div>
+                <div class="ball_tx ball_purple">9</div>
+                <div class="ball_tx ball_purple">1</div>
+            </div>
+        </div>
+        <iframe src="fooder.asp" width="1024" height="70" scrolling="no" frameborder="0"></iframe>
+    </div>
+</form>
+</body>
+</html>
+<!--TLCEND//-->
+
