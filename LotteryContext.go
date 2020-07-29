@@ -6,6 +6,7 @@ import (
 )
 
 type LotteryContext struct {
+	SL638Results []SuperLotto638Result
 }
 
 //All
@@ -30,7 +31,7 @@ func (l *LotteryContext) Fetch() (*LotteryResult, error) {
 	}
 
 	//Parse SuperLotto638
-	superLotto638Result, err := l.parseSuperLotto638(doc)
+	superLotto638Result, err := l.ParseSuperLotto638(doc)
 
 	return &LotteryResult{
 		SuperLotto638Result: superLotto638Result,

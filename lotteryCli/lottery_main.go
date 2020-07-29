@@ -12,13 +12,11 @@ import (
 func main() {
 	l := Lottery.LotteryContext{}
 	fmt.Println("Fetching data from server...")
-	r, err := l.Fetch()
-	if err != nil {
-		fmt.Println(err.Error())
-		os.Exit(1)
-	}
+	res, _ := l.ParseSL638FromHistoryPage()
+
+	sl := res[0]
+
 	fmt.Println("Data fetched! ")
-	sl := r.SuperLotto638Result
 	fmt.Printf("本期樂透第%s期:\n開獎日期:%s\nA區:\t\t%v\n排序後A區:\t%v\nB區:%d\n\n", sl.Serial, sl.Date.Format("2006/1/2"), sl.AZone, sl.AZoneSorted, sl.BZone)
 
 	for {

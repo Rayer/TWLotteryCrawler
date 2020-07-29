@@ -17,5 +17,5 @@ func TestLotteryContext_parseSL638FromHistoryPage(t *testing.T) {
 	httpmock.RegisterResponder("GET", "http://210.71.254.181/lotto/superlotto638/history.htm", httpmock.NewStringResponder(200, string(content)))
 
 	l := &LotteryContext{}
-	_, _ = l.parseSL638FromHistoryPage()
+	_, _ = l.ParseSL638FromHistoryPage()
 }

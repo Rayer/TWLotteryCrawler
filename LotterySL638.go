@@ -88,7 +88,7 @@ func (s *SuperLotto638Result) RewardOf(aZone []int, bZone int) (*SuperLottto638R
 			}
 		case 6:
 			reward = &SuperLottto638Reward{
-				Reward:      999999999,
+				Reward:      s.FirstPrice,
 				Description: "第1區6個+第2區",
 				Title:       "頭獎",
 			}
@@ -115,7 +115,7 @@ func (s *SuperLotto638Result) RewardOf(aZone []int, bZone int) (*SuperLottto638R
 			}
 		case 6:
 			reward = &SuperLottto638Reward{
-				Reward:      999999,
+				Reward:      s.SecondPrice,
 				Description: "第1區任6個",
 				Title:       "貳獎",
 			}
@@ -133,7 +133,7 @@ func (s *SuperLotto638Result) RewardOf(aZone []int, bZone int) (*SuperLottto638R
 	return reward, nil
 }
 
-func (l *LotteryContext) parseSuperLotto638(doc *goquery.Document) (*SuperLotto638Result, error) {
+func (l *LotteryContext) ParseSuperLotto638(doc *goquery.Document) (*SuperLotto638Result, error) {
 	iconNode := doc.Find("div#contents_logo_02")
 	if len(iconNode.Nodes) != 1 {
 		return nil, errors.New(fmt.Sprintf("Wrong SuperLotto638 icon node : %d", len(iconNode.Nodes)))
@@ -185,8 +185,9 @@ func (l *LotteryContext) parseSuperLotto638(doc *goquery.Document) (*SuperLotto6
 	return sl638result, nil
 }
 
-func (l *LotteryContext) parseSL638FromHistoryPage() ([]SuperLotto638Result, error) {
-	url := "http://210.71.254.181/lotto/superlotto638/history.htm"
+func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, error) {
+	//url := "http://210.71.254.181/lotto/superlotto638/history.htm"
+	url := "https://www.taiwanlottery.com.tw/lotto/superlotto638/history.aspx"
 	res, err := http.Get(url)
 	if err != nil {
 		return nil, err
