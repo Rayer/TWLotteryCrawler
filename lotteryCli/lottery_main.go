@@ -14,14 +14,37 @@ func main() {
 	fmt.Println("Fetching data from server...")
 	res, _ := l.ParseSL638FromHistoryPage()
 
-	sl := res[0]
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Printf("一共取得%d期資料:\n", len(res))
+	for i, v := range res {
+		fmt.Printf("[%d]\t%s期\t(%s)\n", i, v.Serial, v.Date.Format("2006-1-2"))
+	}
+
+	var sl Lottery.SuperLotto638Result
+	fmt.Println("請選擇期數[0] : ")
+	for {
+		input, _ := reader.ReadString('\n')
+		input = strings.Trim(input, "\n")
+
+		idx, err := strconv.Atoi(input)
+		if err != nil {
+			fmt.Println("Wrong input!")
+			continue
+		}
+		if idx > len(res) {
+			fmt.Printf("Out of bound!")
+			continue
+		}
+		sl = res[idx]
+		break
+	}
 
 	fmt.Println("Data fetched! ")
 	fmt.Printf("本期樂透第%s期:\n開獎日期:%s\nA區:\t\t%v\n排序後A區:\t%v\nB區:%d\n\n", sl.Serial, sl.Date.Format("2006/1/2"), sl.AZone, sl.AZoneSorted, sl.BZone)
 
 	for {
 		fmt.Println("請輸入號碼，以空白隔開。前六個數字為Ａ區，最後一個數字為Ｂ區，共七組:")
-		reader := bufio.NewReader(os.Stdin)
 		text, _ := reader.ReadString('\n')
 		text = strings.Trim(text, "\n")
 		text_slice := strings.Split(text, " ")

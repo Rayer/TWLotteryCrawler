@@ -274,13 +274,22 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 			return
 		}
 
+		var resultDate time.Time
+		r := regexp.MustCompile("(\\d+)\\/(\\d+)\\/(\\d+)")
+		if find := r.FindStringSubmatch(fieldTargets[6]); len(find) > 1 {
+			year, _ := strconv.Atoi(find[1])
+			year += 1911
+			find[1] = strconv.Itoa(year)
+			resultDate, _ = time.Parse("2006 1 2", strings.Join(find[1:4], " "))
+		}
+
 
 		ret = append(ret, SuperLotto638Result{
 			AZone:       aZone,
 			AZoneSorted: aZoneSorted,
 			BZone:       bZone,
 			Serial:      fieldTargets[5],
-			Date:        time.Time{},
+			Date:        resultDate,
 			FirstPrice:  firstPrice,
 			SecondPrice: secondPrice,
 			RolloverFP:  firstPriceRollover,
