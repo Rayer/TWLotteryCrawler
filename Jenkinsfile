@@ -34,8 +34,8 @@ pipeline {
         stage('build and archive executable') {
             steps {
                 sh label: 'show version', script: 'go version'
-                sh label: 'build cli', script: "go build ./lotteryCli/* -o bin/${params.cli_app_name}"
-                sh label: 'build app', script: "go build ./lotteryUi/* -o bin./${params.demo_app_name}"
+                sh label: 'build cli', script: "go build  -o bin/${params.cli_app_name} ./lotteryCli/*"
+                sh label: 'build app', script: "go build -o bin./${params.demo_app_name} ./lotteryUi/*"
                 archiveArtifacts artifacts: 'bin/*', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
             }
         }
