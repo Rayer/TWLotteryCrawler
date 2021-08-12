@@ -251,13 +251,10 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 		}
 
 		firstPrice, err := strconv.Atoi(strings.Replace(fieldTargets[73], ",", "", -1))
+
 		if err != nil {
 			logrus.Warnf("Fail to parse firstPrice : %+v", fieldTargets[73])
 			return
-		}
-		//For some reason, first price will be 0, dunno why
-		if firstPrice == 0 {
-			firstPrice = 100000000
 		}
 
 		secondPrice, err := strconv.Atoi(strings.Replace(fieldTargets[74], ",", "", -1))
@@ -272,10 +269,18 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 			return
 		}
 
+		if firstPrice == 0 {
+			firstPrice = firstPriceRollover
+		}
+
 		secondPriceRollover, err := strconv.Atoi(strings.Replace(fieldTargets[86], ",", "", -1))
 		if err != nil {
 			logrus.Warnf("Fail to parse secondPriceRollover : %+v", fieldTargets[86])
 			return
+		}
+
+		if secondPrice == 0 {
+			secondPrice = secondPriceRollover
 		}
 
 		var resultDate time.Time
