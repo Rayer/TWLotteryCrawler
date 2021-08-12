@@ -200,9 +200,9 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 	ret := make([]SuperLotto638Result, 0)
 	doc.Find("table#SuperLotto638Control_history1_dlQuery").Find("table.td_hm").Each(func(index int, selection *goquery.Selection) {
 		td := selection.Find("table tr td")
-		fmt.Printf("Index : %d\n", index)
+		//fmt.Printf("Index : %d\n", index)
 		fieldTargets := strings.Fields(strings.Replace(td.Text(), "\n", "", -1))
-		fmt.Println(fieldTargets)
+		//fmt.Println(fieldTargets)
 		/**Per table, it will looks like :
 		[期別 開獎日 兌獎截止(註5) 銷售金額 獎金總額 						(0-4) titles
 		 109000060 109/07/27 109/10/27 1,999,389,700 3,633,111,827  (5-9) 期數，開獎日期，兌獎期限，本期銷售，獎金總額
@@ -256,19 +256,19 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 			return
 		}
 
-		secondPrice, err := strconv.Atoi(strings.Replace(fieldTargets[74],",", "", -1))
+		secondPrice, err := strconv.Atoi(strings.Replace(fieldTargets[74], ",", "", -1))
 		if err != nil {
 			logrus.Warnf("Fail to parse secondPrice : %+v", fieldTargets[74])
 			return
 		}
 
-		firstPriceRollover, err := strconv.Atoi(strings.Replace(fieldTargets[85],",", "", -1))
+		firstPriceRollover, err := strconv.Atoi(strings.Replace(fieldTargets[85], ",", "", -1))
 		if err != nil {
 			logrus.Warnf("Fail to parse firstPriceRollover : %+v", fieldTargets[85])
 			return
 		}
 
-		secondPriceRollover, err := strconv.Atoi(strings.Replace(fieldTargets[86],",", "", -1))
+		secondPriceRollover, err := strconv.Atoi(strings.Replace(fieldTargets[86], ",", "", -1))
 		if err != nil {
 			logrus.Warnf("Fail to parse secondPriceRollover : %+v", fieldTargets[86])
 			return
@@ -283,7 +283,6 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 			resultDate, _ = time.Parse("2006 1 2", strings.Join(find[1:4], " "))
 		}
 
-
 		ret = append(ret, SuperLotto638Result{
 			AZone:       aZone,
 			AZoneSorted: aZoneSorted,
@@ -297,6 +296,6 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 		})
 
 	})
-	fmt.Printf("%+v", ret)
+	//fmt.Printf("%+v", ret)
 	return ret, nil
 }
