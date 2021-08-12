@@ -1,6 +1,7 @@
 package TWLotteryCrawer
 
 import (
+	"fmt"
 	"github.com/jarcoal/httpmock"
 	"io/ioutil"
 	"testing"
@@ -14,8 +15,8 @@ func TestLotteryContext_parseSL638FromHistoryPage(t *testing.T) {
 	if err != nil {
 		t.Error(err.Error())
 	}
-	httpmock.RegisterResponder("GET", "http://210.71.254.181/lotto/superlotto638/history.htm", httpmock.NewStringResponder(200, string(content)))
+	httpmock.RegisterResponder("GET", "https://www.taiwanlottery.com.tw/lotto/superlotto638/history.aspx", httpmock.NewStringResponder(200, string(content)))
 
 	l := &LotteryContext{}
-	_, _ = l.ParseSL638FromHistoryPage()
+	fmt.Println(l.ParseSL638FromHistoryPage())
 }

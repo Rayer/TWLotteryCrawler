@@ -1,9 +1,9 @@
 package main
 
 import (
-	Lottery "TWLotteryCrawer"
 	"bufio"
 	"fmt"
+	Lottery "github.com/Rayer/TWLotteryCrawler"
 	"os"
 	"strconv"
 	"strings"

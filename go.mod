@@ -1,4 +1,4 @@
-module TWLotteryCrawer
+module github.com/Rayer/TWLotteryCrawler
 
 go 1.13
 
