@@ -26,7 +26,9 @@ func main() {
 	for {
 		input, _ := reader.ReadString('\n')
 		input = strings.Trim(input, "\n")
-
+		if input == "" {
+			input = "0"
+		}
 		idx, err := strconv.Atoi(input)
 		if err != nil {
 			fmt.Println("Wrong input!")
