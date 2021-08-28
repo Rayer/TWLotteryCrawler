@@ -10,11 +10,19 @@ import (
 )
 
 func main() {
-	l := Lottery.LotteryContext{}
-	fmt.Println("Fetching data from server...")
-	res, _ := l.ParseSL638FromHistoryPage()
-
 	reader := bufio.NewReader(os.Stdin)
+
+	//fmt.Println("[0] 威力彩")
+	//fmt.Println("[1] 大樂透")
+	//fmt.Print("請選擇服務 [0] : ")
+
+	execSL638(reader)
+
+}
+
+func execSL638(reader *bufio.Reader) {
+	fmt.Println("Fetching data from server...")
+	res, _ := Lottery.ParseSL638FromHistoryPage()
 
 	fmt.Printf("一共取得%d期資料:\n", len(res))
 	for i, v := range res {
@@ -83,5 +91,4 @@ func main() {
 			fmt.Println("沒中獎....下一張!")
 		}
 	}
-
 }

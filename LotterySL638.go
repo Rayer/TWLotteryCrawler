@@ -1,7 +1,6 @@
 package TWLotteryCrawer
 
 import (
-	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -34,7 +33,7 @@ type SuperLottto638Reward struct {
 
 func (s *SuperLotto638Result) RewardOf(aZone []int, bZone int) (*SuperLottto638Reward, error) {
 
-	//Check aZone is unique and correct length
+	//Check numbers is unique and correct length
 	aMap := make(map[int]int)
 	for i, ia := range aZone {
 		aMap[ia] = i
@@ -133,66 +132,16 @@ func (s *SuperLotto638Result) RewardOf(aZone []int, bZone int) (*SuperLottto638R
 	return reward, nil
 }
 
-func (l *LotteryContext) ParseSuperLotto638(doc *goquery.Document) (*SuperLotto638Result, error) {
-	iconNode := doc.Find("div#contents_logo_02")
-	if len(iconNode.Nodes) != 1 {
-		return nil, errors.New(fmt.Sprintf("Wrong SuperLotto638 icon node : %d", len(iconNode.Nodes)))
-	}
-	parent := iconNode.Parent()
-	aZoneBalls := make([]int, 6)
-
-	var err error
-	for i, a := range strings.Split(parent.Find("div.ball_tx").Text(), " ")[0:6] {
-		aZoneBalls[i], err = strconv.Atoi(a)
-		if err != nil {
-			return nil, errors.Wrap(err, "Error while parsing AZone balls")
-		}
-	}
-	aZoneBallsSorted := make([]int, 6)
-	for i, a := range strings.Split(parent.Find("div.ball_tx").Text(), " ")[6:12] {
-		aZoneBallsSorted[i], err = strconv.Atoi(a)
-		if err != nil {
-			return nil, errors.Wrap(err, "Error while parsing AZone Sorted balls")
-		}
-	}
-	bZoneBall, err := strconv.Atoi(strings.Trim(parent.Find("div.ball_red").Text(), " "))
-
-	if err != nil {
-		return nil, errors.Wrap(err, "Error while parsing BZone balls")
-	}
-	//Parse date and serial
-	//109/7/23&nbsp;第109000059期
-	var serial string
-	var date time.Time
-	dateSerialString := strings.Trim(parent.Find("div.contents_mine_tx02").Find("span.font_black15").Text(), " ")
-	r := regexp.MustCompile("(\\d+)\\/(\\d+)\\/(\\d+).第(\\d+)期")
-	if find := r.FindStringSubmatch(dateSerialString); len(find) > 1 {
-		year, _ := strconv.Atoi(find[1])
-		year += 1911
-		find[1] = strconv.Itoa(year)
-		date, _ = time.Parse("2006 1 2", strings.Join(find[1:4], " "))
-		serial = find[4]
-	}
-
-	sl638result := &SuperLotto638Result{
-		AZone:       aZoneBalls,
-		AZoneSorted: aZoneBallsSorted,
-		BZone:       bZoneBall,
-		Serial:      serial,
-		Date:        date,
-	}
-
-	return sl638result, nil
-}
-
-func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, error) {
+func ParseSL638FromHistoryPage() ([]SuperLotto638Result, error) {
 	//url := "http://210.71.254.181/lotto/superlotto638/history.htm"
 	url := "https://www.taiwanlottery.com.tw/lotto/superlotto638/history.aspx"
 	res, err := http.Get(url)
 	if err != nil {
 		return nil, err
 	}
-	defer res.Body.Close()
+	defer func() {
+		_ = res.Body.Close()
+	}()
 	doc, err := goquery.NewDocumentFromReader(res.Body)
 	if err != nil {
 		return nil, err
@@ -229,7 +178,7 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 		for _, v := range fieldTargets[14:20] {
 			d, err := strconv.Atoi(v)
 			if err != nil {
-				logrus.Warnf("Fail to parse aZone : %+v", v)
+				logrus.Warnf("Fail to parse numbers : %+v", v)
 				return
 			}
 			aZone = append(aZone, d)
@@ -237,7 +186,7 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 		for _, v := range fieldTargets[22:28] {
 			d, err := strconv.Atoi(v)
 			if err != nil {
-				logrus.Warnf("Fail to parse aZone : %+v", v)
+				logrus.Warnf("Fail to parse numbers : %+v", v)
 				return
 			}
 			aZoneSorted = append(aZoneSorted, d)
@@ -246,7 +195,7 @@ func (l *LotteryContext) ParseSL638FromHistoryPage() ([]SuperLotto638Result, err
 		bZone, err := strconv.Atoi(fieldTargets[28])
 
 		if err != nil {
-			logrus.Warnf("Fail to parse bZone : %+v", fieldTargets[28])
+			logrus.Warnf("Fail to parse special : %+v", fieldTargets[28])
 			return
 		}
 
