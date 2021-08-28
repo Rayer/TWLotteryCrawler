@@ -46,7 +46,7 @@ B區:1
 
 ### 安裝
 
-目前還沒release go mod，晚點有空再弄，先直接使用這兩個檔案: `LotteryL649.go` `LotterySL638.go`
+`go get github.com/Rayer/TWLotteryCrawler`
 
 ### 使用
 
